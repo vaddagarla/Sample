@@ -103,7 +103,7 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="939,3403" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="939,3398" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="BoolFlag" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt1" />
@@ -122,19 +122,19 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt1]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="654,120" sap2010:WorkflowViewState.IdRef="ReadRange_4" SheetName="Sheet1" WorkbookPath="input\Test - Result.xlsx" />
     <ui:ReadRange DataTable="{x:Null}" Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="654,120" sap2010:WorkflowViewState.IdRef="ReadRange_5" SheetName="Sheet2" WorkbookPath="input\Test - Result.xlsx" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt1]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="654,3001" sap2010:WorkflowViewState.IdRef="ForEachRow_7">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt1]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="654,2996" sap2010:WorkflowViewState.IdRef="ForEachRow_7">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="620,2805" sap2010:WorkflowViewState.IdRef="Sequence_40">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="620,2800" sap2010:WorkflowViewState.IdRef="Sequence_40">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If Condition="[string.IsNullOrEmpty(CurrentRow(1).ToString.Trim)]" sap:VirtualizedContainerService.HintSize="586,2745" sap2010:WorkflowViewState.IdRef="If_5">
+            <If Condition="[string.IsNullOrEmpty(CurrentRow(1).ToString.Trim)]" sap:VirtualizedContainerService.HintSize="586,2740" sap2010:WorkflowViewState.IdRef="If_5">
               <If.Then>
                 <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,25" sap2010:WorkflowViewState.IdRef="Sequence_41">
                   <sap:WorkflowViewStateService.ViewState>
@@ -162,7 +162,7 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="552,2559" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="552,2554" sap2010:WorkflowViewState.IdRef="Sequence_42">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -177,7 +177,7 @@
                       <InArgument x:TypeArguments="x:String">[CurrentRow(1).ToString.Trim]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <Assign sap:VirtualizedContainerService.HintSize="518,116" sap2010:WorkflowViewState.IdRef="Assign_23">
+                  <Assign sap:VirtualizedContainerService.HintSize="518,115" sap2010:WorkflowViewState.IdRef="Assign_23">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Boolean">[BoolFlag]</OutArgument>
                     </Assign.To>
@@ -187,7 +187,7 @@ Where row.Field(Of String)("Bol No#") = vStrExternalBolNum
 Select row).Any()]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <If Condition="[BoolFlag=True]" sap:VirtualizedContainerService.HintSize="518,2269" sap2010:WorkflowViewState.IdRef="If_6">
+                  <If Condition="[BoolFlag=True]" sap:VirtualizedContainerService.HintSize="518,2265" sap2010:WorkflowViewState.IdRef="If_6">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -195,13 +195,13 @@ Select row).Any()]</InArgument>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <If.Then>
-                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="484,1521" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="484,1518" sap2010:WorkflowViewState.IdRef="Sequence_43">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:UpdateRowItem ColumnIndex="{x:Null}" ColumnName="BOL_Match" DisplayName="Update Row Item" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="UpdateRowItem_3" Row="[CurrentRow]" Value="[&quot;Match found&quot;]">
+                        <ui:UpdateRowItem ColumnIndex="{x:Null}" ColumnName="BOL_Match" DisplayName="Update Row Item" sap:VirtualizedContainerService.HintSize="450,224" sap2010:WorkflowViewState.IdRef="UpdateRowItem_3" Row="[CurrentRow]" Value="[&quot;Match found  &quot;]">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -209,7 +209,7 @@ Select row).Any()]</InArgument>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:UpdateRowItem>
-                        <Assign sap:VirtualizedContainerService.HintSize="450,116" sap2010:WorkflowViewState.IdRef="Assign_24">
+                        <Assign sap:VirtualizedContainerService.HintSize="450,115" sap2010:WorkflowViewState.IdRef="Assign_24">
                           <Assign.To>
                             <OutArgument x:TypeArguments="sd:DataTable">[test_dt1]</OutArgument>
                           </Assign.To>
