@@ -99,7 +99,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Task_LINQ" sap:VirtualizedContainerService.HintSize="939,4060" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Task_LINQ" sap:VirtualizedContainerService.HintSize="939,4033" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="DataTable1" />
       <Variable x:TypeArguments="sd:DataTable" Name="DataTable2" />
@@ -118,19 +118,19 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[DataTable1]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="654,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Terminal Statement Summary Repo" WorkbookPath="input\Test - Result.xlsx" />
     <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[DataTable2]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="654,120" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="TerminalStatmentData" WorkbookPath="input\Test - Result.xlsx" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DataTable1]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="654,3485" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DataTable1]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="654,3458" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="620,3289" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="620,3262" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If Condition="[string.IsNullOrEmpty(CurrentRow(1).ToString.Trim)]" sap:VirtualizedContainerService.HintSize="586,3229" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[string.IsNullOrEmpty(CurrentRow(1).ToString.Trim)]" sap:VirtualizedContainerService.HintSize="586,3202" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
                 <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,499" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
@@ -158,7 +158,7 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="552,2569" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="552,2542" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -183,7 +183,7 @@ Where row.Field(Of String)("Bol No#") = StrExternalBolNum
 Select row).Any()]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <If Condition="[BoolFlag=True]" sap:VirtualizedContainerService.HintSize="518,2280" sap2010:WorkflowViewState.IdRef="If_3">
+                  <If Condition="[BoolFlag=True]" sap:VirtualizedContainerService.HintSize="518,2253" sap2010:WorkflowViewState.IdRef="If_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -191,7 +191,7 @@ Select row).Any()]</InArgument>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <If.Then>
-                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="484,1537" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="484,1510" sap2010:WorkflowViewState.IdRef="Sequence_7">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -277,7 +277,7 @@ Select row).CopyToDataTable]</InArgument>
                             </Sequence>
                           </If.Else>
                         </If>
-                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="450,75" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="CommentOut_2">
                           <ui:CommentOut.Body>
                             <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,280" sap2010:WorkflowViewState.IdRef="Sequence_12">
                               <sap:WorkflowViewStateService.ViewState>
@@ -344,7 +344,7 @@ Select row).CopyToDataTable]</InArgument>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="654,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Completed&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="654,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Ended&quot;]" />
     <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[DataTable1]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="654,139" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Terminal Statement Summary Repo" WorkbookPath="input\Test - Result.xlsx" />
   </Sequence>
 </Activity>
