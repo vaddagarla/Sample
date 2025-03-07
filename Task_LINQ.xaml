@@ -99,7 +99,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Task_LINQ" sap:VirtualizedContainerService.HintSize="939,4206" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Task_LINQ" sap:VirtualizedContainerService.HintSize="939,4033" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="DataTable1" />
       <Variable x:TypeArguments="sd:DataTable" Name="DataTable2" />
@@ -117,7 +117,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[DataTable1]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="654,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Terminal Statement Summary Repo" WorkbookPath="input\Test - Result.xlsx" />
-    <ui:ReadRange DataTable="{x:Null}" Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="654,120" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="TerminalStatmentData" WorkbookPath="input\Test - Result.xlsx" />
+    <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[DataTable2]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="654,120" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="TerminalStatmentData" WorkbookPath="input\Test - Result.xlsx" />
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="654,173" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Process Started&quot;]" />
     <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DataTable1]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="654,3458" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
@@ -345,7 +345,6 @@ Select row).CopyToDataTable]</InArgument>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[DataTable1]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="654,148" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Terminal Statement Summary Repo" WorkbookPath="input\Test - Result.xlsx" />
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="654,164" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Process completed&quot;]" />
+    <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[DataTable1]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="654,139" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Terminal Statement Summary Repo" WorkbookPath="input\Test - Result.xlsx" />
   </Sequence>
 </Activity>
