@@ -106,7 +106,7 @@
       <Variable x:TypeArguments="x:Boolean" Name="BoolFlag" />
       <Variable x:TypeArguments="x:String" Name="StrExternalBolNum" />
       <Variable x:TypeArguments="sd:DataTable" Name="test_dt1" />
-      <Variable x:TypeArguments="x:String" Name="total_quantity1" />
+      <Variable x:TypeArguments="x:String" Name="total_quantityy1" />
       <Variable x:TypeArguments="x:String" Name="total_quantity2" />
       <Variable x:TypeArguments="x:String" Name="text" />
       <Variable x:TypeArguments="sd:DataTable" Name="test_dt2" />
@@ -123,7 +123,7 @@
         </InArgument>
       </ui:ReadRange.Range>
     </ui:ReadRange>
-    <ui:ReadRange DataTable="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="654,120" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="TerminalStatmentData" WorkbookPath="input\Test - Result.xlsx">
+    <ui:ReadRange WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[DataTable2]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="654,120" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="TerminalStatmentData" WorkbookPath="input\Test - Result.xlsx">
       <ui:ReadRange.Range>
         <InArgument x:TypeArguments="x:String">
           <Literal x:TypeArguments="x:String" Value="" />
@@ -240,7 +240,7 @@ Select row).CopyToDataTable]</InArgument>
                         </Assign>
                         <Assign sap:VirtualizedContainerService.HintSize="450,114" sap2010:WorkflowViewState.IdRef="Assign_5">
                           <Assign.To>
-                            <OutArgument x:TypeArguments="x:String">[total_quantity1]</OutArgument>
+                            <OutArgument x:TypeArguments="x:String">[total_quantityy1]</OutArgument>
                           </Assign.To>
                           <Assign.Value>
                             <InArgument x:TypeArguments="x:String">[test_dt1.AsEnumerable().Sum(Function(row) If(IsNumeric(row("Quantity")), Convert.ToDecimal(row("Quantity")), 0)).ToString()]</InArgument>
@@ -254,7 +254,7 @@ Select row).CopyToDataTable]</InArgument>
                             <InArgument x:TypeArguments="x:String">[test_dt2.AsEnumerable().Sum(Function(row) If(IsNumeric(row("Quantity")), Convert.ToDecimal(row("Quantity")), 0)).ToString()]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <If Condition="[total_quantity1=total_quantity2]" sap:VirtualizedContainerService.HintSize="450,720" sap2010:WorkflowViewState.IdRef="If_4">
+                        <If Condition="[total_quantityy1=total_quantity2]" sap:VirtualizedContainerService.HintSize="450,720" sap2010:WorkflowViewState.IdRef="If_4">
                           <If.Then>
                             <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,275" sap2010:WorkflowViewState.IdRef="Sequence_10">
                               <sap:WorkflowViewStateService.ViewState>
